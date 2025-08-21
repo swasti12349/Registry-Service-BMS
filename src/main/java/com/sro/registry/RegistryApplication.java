@@ -3,7 +3,7 @@ package com.sro.registry;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
-
+//application main file
 @EnableEurekaServer
 @SpringBootApplication
 public class RegistryApplication {
