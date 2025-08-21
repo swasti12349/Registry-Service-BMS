@@ -30,11 +30,12 @@ jobs:
 
     - name: Upload JAR to S3
       run: |
-        aws s3 cp target/myapp-1.0.0.jar s3://my-springboot-lambda-bucket/
+        aws s3 cp target/registry-0.0.1-SNAPSHOT.jar s3://myregistrybucket/
 
     - name: Update Lambda with new code
       run: |
         aws lambda update-function-code \
-          --function-name springboot-microservice \
-          --s3-bucket my-springboot-lambda-bucket \
-          --s3-key myapp-1.0.0.jar
+          --function-name registry-function \
+          --s3-bucket myregistrybucket \
+          --s3-key registry-0.0.1-SNAPSHOT.jar
+
