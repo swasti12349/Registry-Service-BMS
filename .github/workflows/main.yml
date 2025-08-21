@@ -2,7 +2,7 @@ name: Deploy Spring Boot Microservice to AWS Lambda
 
 on:
   push:
-    branches: [ "main" ]   # runs on pushes to main branch
+    branches: [ "master" ]   # runs on pushes to main branch
 
 jobs:
   build-deploy:
